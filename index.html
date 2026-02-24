@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Letters</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      .letter {
+        display: none;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      .letter.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reply to your Letter</h1>
+
+       <div class="letter active" id="letter1">
+      <p>Reply for Feb 25th: </p>
+<p>It was the last day of MUN. The place where I met you, where I found my purest love I was dying for. I  was genuinely nervous and scared that day while raising the DR. I have never done this before and I was scared of fucking it up. I have severe level of social anxiety afterall. I was scared that u would lose the award because of me, but hey, I doubt even u were as happy as I was when u got the special mention. More like I was relieved. I was having a really bad day and planned on leaving soon. But something in me stopped me from going and that was the best decision I have ever made. Because of that we got to spend time together. I would sell my fortune to get back to that day again.</p>
+<p> Idk if u noticed but during that song "Aj raate kono rupkothha nei" I stood really close to you, maybe bcz of crowd or maybe it was just me, but as I felt your presence and smelled your scent, my heart went crazy asf. I was confused. Then I was staring at you for a while, staring at that smile and lord! I realised and told myself "Arshia, you really fell for this man, didn't you?" I kept convincing myself that this is just another attraction. But the more I convinced myself, the more I fell harder. And now here we are, waiting for a shaboink as god knows what u are doing {sorry for the wait) and me? writing this while blushing like a red tomato with my heart beating like crazy. Just like the day I got close to you. As a woman who HATES coding, here I am, spending my whole day coding this website to write reply letters for you, loving you in your love language. Ik it is not perfect and I also know that there will be thousands of troubleshooting cz I literally learnt coding in a day, thanks to my teacher chatgpt. Please excuse my mistakes. I am still learning. </p>
+<p>I love you in every universe, my love. </p>
+    </div>
+    
+<script>
+      // Define your start date
+      const startDate = new Date('2026-02-25');
+      startDate.setHours(0, 0, 0, 0); // Set to midnight
+
+      // Get today's date
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set to midnight
+
+      // Calculate the difference in days
+      const timeDiff = today - startDate;
+      const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+      // Log the day difference to check it
+      console.log('Day difference:', dayDiff);
+
+      // Hide all letters initially
+      const letters = document.querySelectorAll('.letter');
+      letters.forEach(letter => {
+        letter.classList.remove('letter-active');
+      });
+
+      // Show the letter for the day difference, if it's valid
+      if (dayDiff >= 0 && dayDiff < letters.length) {
+        letters[dayDiff].classList.add('letter-active');
+      }
+    </script>
+     </body>
+</html>
